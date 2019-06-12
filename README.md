@@ -7,10 +7,10 @@ This repository provides everything to build and release the [ctxswitch/kafka](h
 ##### Start the container
 
 ```
-# docker run -p 2181:2181 -p 9092:9092 -p 9998 --env DELETE_TOPIC=true ctxswitch/kafka
+# docker run -p 2181:2181 -p 9092:9092 -p 9998 --env DELETE_TOPIC=true --name kafka ctxswitch/kafka
 ```
 
-If you have java and the kafka administrative shell scripts you can try creating a topic, publishing some messages to it, and consume.
+The bin directory contains some wrappers that allow you to run administrative commands through the same container images that you are running the server with.  This interactive session requires you to either name the container running the server as `kafka` or set the `KAFKA_CONTAINER_NAME` environment variable to the name of the appropriate container.
 
 ##### Try creating a topic
 
