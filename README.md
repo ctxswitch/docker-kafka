@@ -21,7 +21,7 @@ The bin directory contains some wrappers that allow you to run administrative co
 ##### Try publishing some messages to the topic
 
 ```
-./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test < <(seq -f "%03g" 100)       
+seq -f "%03g" 100 | ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test     
 ```
 
 ##### Try consuming the messages
