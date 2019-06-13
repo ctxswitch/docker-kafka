@@ -40,5 +40,5 @@ fi
 CMD=$1
 shift
 
-docker run -ti --network container:$CONTAINER_ID $KAFKA_IMAGE $KAFKA_HOME/bin/$CMD $@
+docker run -i --network container:$CONTAINER_ID $KAFKA_IMAGE $KAFKA_HOME/bin/$CMD $@
 exit $?
